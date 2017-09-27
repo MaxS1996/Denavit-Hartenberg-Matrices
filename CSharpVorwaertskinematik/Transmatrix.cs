@@ -54,11 +54,11 @@ namespace CSharpVorwaertskinematik
 
         protected void Generate(Joint joint)
         {
-            double CosTheta = Math.Cos(joint.Theta());
-            double SinTheta = Math.Sin(joint.Theta());
+            double CosTheta = Math.Cos(joint.Theta()*Math.PI/180);
+            double SinTheta = Math.Sin(joint.Theta() * Math.PI / 180);
 
-            double CosAlpha = Math.Cos(joint.Alpha());
-            double SinAlpha = Math.Sin(joint.Alpha());
+            double CosAlpha = Math.Cos(joint.Alpha() * Math.PI / 180);
+            double SinAlpha = Math.Sin(joint.Alpha() * Math.PI / 180);
 
             a[0] = CosTheta;
             a[1] = SinTheta;
